@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b1b" />
+    <meta
+      name="description"
+      content="Футуристичный каталог техники, гаджетов и автомобилей. Сравни модели и найди предложения продавцов."
+    />
+    <title>TechNova — технологии будущего</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+    <script src="background.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="TechNova — наверх">
+        <span class="brand-icon" aria-hidden="true">✦</span>
+        <span>Tech<span class="brand-period">Nova</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="pages/phones/index.html">Телефоны</a>
+        <a href="pages/gaming/index.html">Игровая зона</a>
+        <a href="pages/audio/index.html">Аудио</a>
+        <a href="pages/catalog/index.html">Ещё <span aria-hidden="true">⌄</span></a>
+      </nav>
+      <button class="cart-trigger" id="cart-trigger" type="button" aria-label="Открыть корзину"><span aria-hidden="true">🛒</span><span>Корзина</span><b id="cart-count">0</b></button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> TECHNOVA · СИСТЕМА ВЫБОРА 2026</div>
+          <h1>Технологии,<br />которые <span>двигают</span><br />будущее.</h1>
+          <p>
+            От смартфонов и мощных игровых систем до умного дома, камер и электромобилей.
+            Найди устройства для своего следующего уровня.
+          </p>
+          <a class="primary-button" href="#catalog">Открыть каталог <span aria-hidden="true">↘</span></a>
+          <div class="hero-assurance">
+            <span class="assurance-icon" aria-hidden="true">✦</span>
+            Новинки · гаджеты · технологии завтрашнего дня
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Иллюстрация телефона, планшета и автомобиля">
+          <div class="visual-ring ring-back"></div>
+          <div class="visual-ring ring-front"></div>
+          <div class="visual-card card-phone"><span>◉</span><small>PHONE</small></div>
+          <div class="visual-card card-tablet"><span>▣</span><small>TABLET</small></div>
+          <div class="visual-card card-car"><span>⌁</span><small>YOUR NEXT CAR</small></div>
+          <div class="visual-center">?</div>
+          <span class="visual-star visual-star-one" aria-hidden="true">✳</span>
+          <span class="visual-star visual-star-two" aria-hidden="true">✦</span>
+          <span class="visual-note">Умный выбор<br /><b>начинается с тебя</b></span>
+        </div>
+
+        <div class="hero-index"><span>01</span><span class="index-divider"></span><span>ТЕХНОЛОГИИ БУДУЩЕГО УЖЕ ЗДЕСЬ</span></div>
+      </section>
+
+      <section class="quick-search" aria-labelledby="quick-search-title">
+        <div class="search-intro">
+          <span class="eyebrow">ПОИСК ПО ВСЕЛЕННОЙ TECHNOVA</span>
+          <h2 id="quick-search-title">Найди своё устройство.</h2>
+        </div>
+        <form class="search-form" id="search-form">
+          <label class="sr-only" for="model-query">Название товара или модели</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="model-query" name="query" type="search" placeholder="Например, Galaxy Ultra или игровая камера" required />
+          <label class="sr-only" for="category-select">Тип товара</label>
+          <select id="category-select" name="category" aria-label="Тип товара">
+            <option value="all">Любая категория</option>
+            <option value="phone">Телефон</option>
+            <option value="tablet">Планшет</option>
+            <option value="car">Автомобиль</option>
+            <option value="laptop">Ноутбук</option>
+            <option value="gaming">Игровая техника</option>
+            <option value="audio">Аудио</option>
+            <option value="wearable">Носимая техника</option>
+            <option value="camera">Камера</option>
+            <option value="home">Умный дом</option>
+          </select>
+          <label class="sr-only" for="budget-input">Максимальный бюджет в долларах США</label>
+          <span class="budget-prefix">$</span>
+          <input id="budget-input" name="budget" type="number" min="1" step="100" placeholder="Бюджет" inputmode="numeric" />
+          <button type="submit">Найти модель <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="search-footnote">Откроем актуальные предложения у продавцов в США. Цены зависят от комплектации, налогов и наличия.</p>
+      </section>
+
+      <section class="catalog-section" id="catalog">
+        <div class="section-top">
+          <div>
+              <div class="eyebrow">ПОДБОРКА ДЛЯ ТЕБЯ</div>
+              <h2>Всё, что вдохновляет.</h2>
+              <p class="section-subtitle">Исследуй новые устройства и сравнивай цены у продавцов.</p>
+          </div>
+          <span class="live-badge"><span></span> США · USD</span>
+        </div>
+
+        <div class="category-tabs" role="group" aria-label="Фильтр по категории">
+          <button class="category-tab is-active" type="button" data-filter="all" aria-pressed="true">Всё <span>48</span></button>
+          <button class="category-tab" type="button" data-filter="phone" aria-pressed="false">Телефоны <span>07</span></button>
+          <button class="category-tab" type="button" data-filter="tablet" aria-pressed="false">Планшеты <span>06</span></button>
+          <button class="category-tab" type="button" data-filter="car" aria-pressed="false">Машины <span>06</span></button>
+          <button class="category-tab" type="button" data-filter="laptop" aria-pressed="false">Ноутбуки</button>
+          <button class="category-tab" type="button" data-filter="gaming" aria-pressed="false">Игры</button>
+          <button class="category-tab" type="button" data-filter="audio" aria-pressed="false">Аудио</button>
+          <button class="category-tab" type="button" data-filter="wearable" aria-pressed="false">Носимые</button>
+          <button class="category-tab" type="button" data-filter="camera" aria-pressed="false">Камеры</button>
+          <button class="category-tab" type="button" data-filter="home" aria-pressed="false">Умный дом</button>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+        <p class="price-note">
+          Цены указаны в долларах США и являются ориентировочными. Проверяй актуальную комплектацию, налоги, наличие и итоговую стоимость у продавца.
+        </p>
+      </section>
+
+      <section class="compare-section" id="compare">
+        <div class="compare-heading">
+          <div>
+            <div class="eyebrow">РЕШЕНИЕ ЗА ТОБОЙ</div>
+            <h2>Собери своё сравнение.</h2>
+            <p>            Добавь устройства и сравнивай цены рядом. Твои данные останутся на этом устройстве.</p>
+          </div>
+          <span class="compare-count" id="compare-count">0 / 3</span>
+        </div>
+        <div class="compare-empty" id="compare-empty">
+          <span class="empty-spark" aria-hidden="true">✳</span>
+          <span>Добавь сюда модели из подборки — и сравнивай их рядом.</span>
+          <a href="#catalog">Смотреть подборку <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="comparison-grid" id="comparison-grid"></div>
+        <p class="local-note"><span aria-hidden="true">⌑</span> Твои записи хранятся только в браузере на этом устройстве.</p>
+      </section>
+
+      <section class="guide-section" id="buying-guide">
+        <div class="guide-heading">
+          <div class="eyebrow">ПЕРЕД ПОКУПКОЙ</div>
+          <h2>Три проверки,<br /><span>которые берегут деньги.</span></h2>
+        </div>
+        <div class="guide-list">
+          <article class="guide-item">
+            <span class="guide-number">01</span>
+            <div><h3>Сравни одинаковое</h3><p>Проверь поколение, объём памяти, комплектацию и состояние — новые и подержанные вещи сравнивай отдельно.</p></div>
+            <span class="guide-mark" aria-hidden="true">↗</span>
+          </article>
+          <article class="guide-item">
+            <span class="guide-number">02</span>
+            <div><h3>Уточни полную цену</h3><p>Добавь налоги, доставку, страховку и обязательные платежи. У автомобиля проверь ещё страховку и обслуживание.</p></div>
+            <span class="guide-mark" aria-hidden="true">↗</span>
+          </article>
+          <article class="guide-item">
+            <span class="guide-number">03</span>
+            <div><h3>Проверь продавца</h3><p>Посмотри условия возврата, гарантию, отзывы и то, что именно входит в комплект или объявленную цену.</p></div>
+            <span class="guide-mark" aria-hidden="true">↗</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#"><span class="brand-icon" aria-hidden="true">✦</span><span>Tech<span class="brand-period">Nova</span></span></a>
+      <span>Твой портал в будущее технологий.</span>
+      <a href="#buying-guide">Советы перед покупкой ↑</a>
+      <span>Рынок США · цены в USD</span>
+    </footer>
+    <div class="toast is-hidden" id="toast" role="status"></div>
+  </body>
+</html>
